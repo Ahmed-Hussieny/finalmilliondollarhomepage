@@ -1,0 +1,104 @@
+
+.canvas-container {
+    display: grid;
+    grid-template-columns: repeat(100, 10px); 
+    grid-template-rows: repeat(100, 10px); 
+    border: black solid 1px;
+    justify-content: center;
+  }
+  
+  .cell {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border: rgb(238, 236, 236) solid 0.5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden !important;
+  }
+  div[style] {
+    border: 0;
+  }
+  .cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .grid-container {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .highlight-box {
+    position: absolute;
+    border: 2px solid blue;
+    z-index: 2;
+    pointer-events: none;
+  }
+  /* Container that holds the SVG */
+.svg-container {
+  width: 100%;         /* Make the container take up the full width */
+  height: 100%;        /* Make the container take up the full height of the parent element */
+  display: flex;
+  justify-content: center; /* Center the SVG horizontally */
+  align-items: center;     /* Center the SVG vertically */
+  overflow: hidden;        /* Hide any overflow */
+}
+
+/* Class for the SVG content */
+.svg-content svg {
+  max-width: 100%;    /* Ensure SVG scales to the container width */
+  max-height: 100%;   /* Ensure SVG scales to the container height */
+  width: auto;        /* Keep aspect ratio intact */
+  height: auto;       /* Keep aspect ratio intact */
+}
+
+  
+  /* Optional: Media Queries for smaller screens */
+  @media (max-width: 768px) {
+    .grid-container {
+      height: 80vh; /* Adjust the height for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-container {
+      height: 70vh; /* Further adjust for very small screens */
+    }
+  }
+  
+
+
+  .upload-button {
+    display: inline-block;
+    padding: 2px 20px;
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .upload-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .upload-button:active {
+    transform: scale(0.95); /* Button press effect */
+  }
+  
+  .hidden {
+    display: none; /* Hide the file input */
+  }
+  

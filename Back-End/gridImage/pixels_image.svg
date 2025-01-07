@@ -1,0 +1,13 @@
+
+              <svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Define a pattern for the grid background -->
+                  <defs>
+                      <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                          <rect width="10" height="10" fill="white" />
+                          <path d="M 10 0 L 0 0 0 10" fill="none" stroke="gray" stroke-width="1" />
+                      </pattern>
+                  </defs>
+  
+                  <!-- Apply the grid background to a large rectangle -->
+                  <rect width="1000" height="1000" fill="url(#grid)" />
+          </svg>

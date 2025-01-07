@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./Front-End # Path to React Vite app
+      dockerfile: Dockerfile
+    ports:
+      - "80:80" # Expose frontend on port 80
+    restart: always
+
+  backend:
+    build:
+      context: ./Back-End # Path to Node.js app
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Expose backend on port 3000
+    restart: always
+    environment:
+      NODE_ENV: production
